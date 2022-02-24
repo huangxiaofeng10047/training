@@ -7,6 +7,7 @@ func main() {
 	fmt.Printf(HelloWorld("appleboy"))
 	fmt.Println("一天就學會 Go 語言")
 	fmt.Println("南京黄学习 Go 語言")
+	fmt.Println("ok puting is very good")
 
 	if a >= 1 {
 		fmt.Println("a >= 1")
