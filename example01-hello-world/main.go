@@ -19,7 +19,9 @@ func main() {
 		fmt.Println("a >= 100")
 	}
 	if a >= 1000 {
+
 		fmt.Println(" a > 1000")
+
 	}
 }
 
