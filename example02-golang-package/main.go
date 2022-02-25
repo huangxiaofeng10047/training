@@ -9,6 +9,6 @@ import (
 func main() {
 	fmt.Println("一天就學會 Go 語言")
 
-	hi := controller.HelloWorld("appleboy")
+	hi := controller.HelloWorld("hxf168482")
 	fmt.Println(hi)
 }
