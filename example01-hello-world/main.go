@@ -8,15 +8,24 @@ func main() {
 	fmt.Println("一天就學會 Go 語言")
 	fmt.Println("南京黄学习 Go 語言")
 	fmt.Println("ok puting is very good")
+	b := 2
+	c := a + b
+	fmt.Println(c)
 
 	if a >= 1 {
+
 		fmt.Println("a >= 1")
+
 	}
 	if a >= 10 {
+
 		fmt.Println("a >= 10")
+
 	}
 	if a >= 100 {
+
 		fmt.Println("a >= 100")
+
 	}
 	if a >= 1000 {
 
