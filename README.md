@@ -1,9 +1,8 @@
 # Golang Training
 
-[![Build Status](https://cloud.drone.io/api/badges/go-training/training/status.svg)](https://cloud.drone.io/go-training/training)
 [![Run Tests](https://github.com/go-training/training/actions/workflows/go.yml/badge.svg)](https://github.com/go-training/training/actions/workflows/go.yml)
 
-Learning basic [Golang](https://golang.org/) in one day
+Learning basic [Golang](https://go.dev/) in one day
 
 ## Example code
 
@@ -51,6 +50,13 @@ Learning basic [Golang](https://golang.org/) in one day
 * [example44](./example44-signal-with-docker-compose) graceful stop service using docker-compose. [Chinese Blog](https://blog.wu-boy.com/2021/06/graceful-stop-service-using-docker-compose-in-golang/)
 * [example45](./example45-go-1.18-generics) introduction to go1.18 generics. [Chinese Blog](https://blog.wu-boy.com/2022/02/introduction-to-golang-1-18-generics/)
 * [example46](./example46-go-1.18-generics-part2) introduction to go1.18 generics constraints, slices and maps packages. [Chinese Blog](https://blog.wu-boy.com/2022/02/golang-1-18-generics-constraints-slices-maps/)
+* [example47](./example47-pyroscope-adhoc-profiling) pyroscope adhoc profiling in go. [Chinese Blog](https://blog.wu-boy.com/2022/02/pyroscope-adhoc-profiling-in-golang/)
+* [example48](./example48-pub-sub-pattern) simple pub/sub pattern in go. [Chinese Blog](https://blog.wu-boy.com/2022/04/simple-publish-subscribe-pattern-in-golang/)
+* [example49](./example49-dependency-injection/) Dependency Injection using wire tool. [Chinese Blog](https://blog.wu-boy.com/2022/09/dependency-injection-in-go/)
+* [exmaple50](./example50-consumer-producer-pattern/) simple scheduler with multiple worker. [Chinese Blog](https://blog.wu-boy.com/2022/11/simple-scheduler-with-multiple-worker-using-golang/)
+* [example51](./example51-canceler/) How to cancel a running task between backend and worker service. [Chinese Blog](https://blog.wu-boy.com/2022/12/system-design-how-to-cancel-a-running-task-in-golang/)
+* [example52](./example52-ring-buffer-queue/) ring buffer queue with fixed size. [Chinese Blog](https://blog.wu-boy.com/2023/01/ring-buffer-queue-with-fixed-size-in-golang/)
+* [example53](./example53-container-base-image-updates/) A container-based solution for automating Docker container base image updates. [Chinese Blog](https://blog.wu-boy.com/2023/02/automating-docker-container-base-image-updates-cht/), [English Blog](https://blog.wu-boy.com/2023/02/automating-docker-container-base-image-updates-eng/)
 
 [1]:https://github.com/golang/lint
 [2]:https://golang.org/cmd/gofmt/
