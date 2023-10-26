@@ -8,18 +8,34 @@ import (
 	"log"
 	"net"
 	"os"
+	"time"
 )
 
 const HEADER_LEN = 4
 
 type Content struct {
-	Method string      `json:"method"`
-	NetId  string      `json:"netId"`
-	Data   interface{} `json:"params"`
+	Method    string      `json:"method"`
+	NetId     string      `json:"netId"`
+	Data      interface{} `json:"data"`
+	SN        string      `json:"sn"`
+	Timestamp int64       `json:"timestamp"`
+}
+type Alarm struct {
+	AlarmType int    `json:"type"`
+	AlarmDesc string `json:"describe"`
+	AlarmCode int    `json:"code"`
 }
 
 func Packet(method string, netId string, content string) []byte {
-	bytes, _ := json.Marshal(Content{Method: method, NetId: netId, Data: content})
+	//当前时间戳
+	timestamp := time.Now().Unix()
+	//将json转为结构体
+	var alarm Alarm
+	err := json.Unmarshal([]byte(content), &alarm)
+	if err != nil {
+		fmt.Println("json unmarshal error:", err)
+	}
+	bytes, _ := json.Marshal(Content{Method: method, NetId: netId, Data: alarm, SN: "21V30000110122B000113", Timestamp: timestamp})
 	buffer := make([]byte, HEADER_LEN+len(bytes))
 	// 将buffer前面四个字节设置为包长度，大端序
 	binary.BigEndian.PutUint32(buffer[0:4], uint32(len(bytes)))
@@ -28,7 +44,7 @@ func Packet(method string, netId string, content string) []byte {
 }
 
 func main() {
-	conn, e := net.Dial("tcp", "10.7.20.5:30854")
+	conn, e := net.Dial("tcp", "10.7.10.5:30854")
 	if e != nil {
 		log.Fatal(e)
 	}
@@ -37,7 +53,7 @@ func main() {
 	text, _ := reader.ReadString('\n')
 
 	//buffer := new(bytes.Buffer)
-	buffer := Packet("config_req", "1168743388497420289", text)
+	buffer := Packet("alarm", "1096683703008911361", text)
 	conn.Write(buffer)
 	//var message string = ""
 	var wbuffer *bufio.Reader = bufio.NewReader(conn)
