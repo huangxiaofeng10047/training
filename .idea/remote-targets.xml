@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteTargetsManager">
+    <option name="projectDefaultTargetUuid" value="c9827a45-9d07-4a24-b53b-692b0eed02c9" />
+    <targets>
+      <target name="WSL - ArchLinux" type="wsl" uuid="c9827a45-9d07-4a24-b53b-692b0eed02c9">
+        <config>
+          <option name="distributionMsId" value="ArchLinux" />
+          <option name="projectRootOnTarget" value="/mnt/c/Users/Administrator/AppData/Local/JetBrains/Toolbox/apps/Goland/ch-0/222.4345.24/jbr/bin&#10;/training" />
+        </config>
+        <ContributedStateBase type="GoLanguageRuntime">
+          <config>
+            <option name="goPath" value="/home/xfhuang/workspace/go" />
+            <option name="goRoot" value="/usr/bin/go" />
+          </config>
+        </ContributedStateBase>
+        <ContributedStateBase type="GoLanguageRuntime">
+          <config />
+        </ContributedStateBase>
+      </target>
+    </targets>
+  </component>
+</project>

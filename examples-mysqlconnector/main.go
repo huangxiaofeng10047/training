@@ -148,15 +148,22 @@ func InsertUser(user User) bool {
 		return false
 	}
 	//将参数传递到sql语句中并且执行
-	res, err := stmt.Exec(user.name, user.phone)
-	if err != nil {
-		fmt.Println("Exec fail")
-		return false
+	var str []string = []string{user.name}
+	for i := 0; i < 900000; i++ {
+		_, err = stmt.Exec(strings.Join(str, string(i)), user.phone)
+		if err != nil {
+			panic(err.Error())
+		}
 	}
+	//res, err := stmt.Exec(user.name, user.phone)
+	//if err != nil {
+	//	fmt.Println("Exec fail")
+	//	return false
+	//}
 	//将事务提交
 	tx.Commit()
 	//获得上一个插入自增的id
-	fmt.Println(res.LastInsertId())
+	//fmt.Println(res.LastInsertId())
 	return true
 }
 
@@ -170,15 +177,15 @@ func main() {
 	Query()
 	defer DB.Close()
 
-	InitSlaveDB()
+	//InitSlaveDB()
 	//主线程 sleep 1s
 	//time.Sleep(1 * time.Second)
-	QuerySlave()
-	fmt.Println("sleep 1")
+	//QuerySlave()
+	//fmt.Println("sleep 1")
 	//主线程 sleep 1s
-	time.Sleep(1 * time.Millisecond)
-	QuerySlave()
-	defer slaveDb.Close()
+	//time.Sleep(1 * time.Millisecond)
+	//QuerySlave()
+	//defer slaveDb.Close()
 }
 
 /**
