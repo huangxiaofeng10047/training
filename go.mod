@@ -1,6 +1,8 @@
 module github.com/go-training/training
 
-go 1.16
+go 1.21
+
+toolchain go1.22.5
 
 require (
 	github.com/IBM/sarama v1.43.2
@@ -15,7 +17,6 @@ require (
 	github.com/jony-lee/go-progress-bar v0.0.3
 	github.com/nacos-group/nacos-sdk-go/v2 v2.1.0
 	github.com/pkg/errors v0.9.1
-	github.com/rogpeppe/go-internal v1.8.0 // indirect
 	github.com/spf13/cobra v1.6.1
 	github.com/spf13/viper v1.7.1
 	github.com/stretchr/testify v1.9.0
@@ -23,3 +24,5 @@ require (
 	golang.org/x/crypto v0.22.0
 	golang.org/x/sync v0.7.0
 )
+
+require github.com/rogpeppe/go-internal v1.8.0 // indirect
