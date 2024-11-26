@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 func main() {
 	a := 50
@@ -32,6 +35,13 @@ func main() {
 		fmt.Println(" a > 1000")
 
 	}
+	s, sep := "", ""
+	for _, arg := range os.Args[1:] {
+		fmt.Println(arg)
+		s += sep + arg
+		sep = " "
+	}
+	fmt.Println(s)
 }
 
 func HelloWorld(user_name string) string {
