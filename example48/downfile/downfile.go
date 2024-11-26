@@ -37,7 +37,7 @@ func main() {
 	fmt.Println("Download Started")
 
 	fileUrl := "http://topgoer.com/static/2/9.png"
-	err := DownloadFile("9.png", fileUrl)
+	err := DownloadFile("12.png", fileUrl)
 	if err != nil {
 		panic(err)
 	}
