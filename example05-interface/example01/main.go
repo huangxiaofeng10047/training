@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/go-training/training/example05-interface/example01/benchi"
 
 	"github.com/go-training/training/example05-interface/example01/lexus"
 	"github.com/go-training/training/example05-interface/example01/toyota"
@@ -32,4 +33,8 @@ func main() {
 	detail(car2)
 	detail(car3)
 	detail(car4)
+	//add benchi
+
+	car5 := benchi.NewCar("car5", 5000, 0.7, "white")
+	detail(car5)
 }
