@@ -59,7 +59,8 @@ func main() {
 	men = peter
 	men.Say()
 	men.Run()
-
+	//peter 的父类就是 man
+	peter.Learn()
 	men = jerrk
 	men.Say()
 	men.Run()
